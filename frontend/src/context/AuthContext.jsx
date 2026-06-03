@@ -1,8 +1,9 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
-// Set up Axios default config
-axios.defaults.baseURL = 'http://localhost:5000';
+// Set up Axios default config with dynamic host resolution for local/Vercel services
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/_/backend' : 'http://localhost:5000');
+
 
 export const AuthContext = createContext();
 
