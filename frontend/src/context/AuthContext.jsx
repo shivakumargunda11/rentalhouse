@@ -2,7 +2,17 @@ import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 // Set up Axios default config with dynamic host resolution for local/Vercel services
-axios.defaults.baseURL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/_/backend' : 'http://localhost:5000');
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '' : 'http://localhost:5000');
+
+// Request interceptor to automatically route /api calls to the backend service prefix on Vercel
+axios.interceptors.request.use((config) => {
+  if (import.meta.env.PROD && config.url.startsWith('/api') && !import.meta.env.VITE_API_URL) {
+    config.url = `/_/backend${config.url}`;
+  }
+  return config;
+}, (error) => {
+  return Promise.reject(error);
+});
 
 
 export const AuthContext = createContext();

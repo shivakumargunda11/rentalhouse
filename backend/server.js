@@ -29,8 +29,19 @@ app.use('/api/bookings', bookingRoutes);
 app.use('/api/wishlist', wishlistRoutes);
 app.use('/api/admin', adminRoutes);
 
+// Also mount under /_/backend prefix for Vercel routing compatibility
+app.use('/_/backend/api/auth', authRoutes);
+app.use('/_/backend/api/properties', propertyRoutes);
+app.use('/_/backend/api/bookings', bookingRoutes);
+app.use('/_/backend/api/wishlist', wishlistRoutes);
+app.use('/_/backend/api/admin', adminRoutes);
+
 // Base route for connectivity verification
 app.get('/', (req, res) => {
+  res.json({ message: 'HouseHunt MERN API is running...' });
+});
+
+app.get('/_/backend', (req, res) => {
   res.json({ message: 'HouseHunt MERN API is running...' });
 });
 
