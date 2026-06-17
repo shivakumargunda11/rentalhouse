@@ -331,7 +331,7 @@ const PropertyDetail = () => {
 
             {/* Booking Error Banner */}
             {bookingError && (
-              <div className="alert bg-danger bg-opacity-10 border border-danger border-opacity-30 text-danger rounded-3 d-flex align-items-center gap-2 mb-4" style={{ fontSize: '0.85rem' }}>
+              <div className="alert alert-glass-danger rounded-3 d-flex align-items-center gap-2 mb-4" style={{ fontSize: '0.85rem' }}>
                 <ShieldAlert size={16} className="flex-shrink-0" />
                 <span>{bookingError}</span>
               </div>

@@ -306,3 +306,18 @@ body {
   background: rgba(255, 255, 255, 0.03);
   color: white;
 }
+
+/* Custom premium glassmorphic alert box classes */
+.alert-glass-danger {
+  background: rgba(239, 68, 68, 0.12) !important;
+  color: #fca5a5 !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  backdrop-filter: blur(10px);
+}
+
+.alert-glass-success {
+  background: rgba(16, 185, 129, 0.12) !important;
+  color: #6ee7b7 !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+  backdrop-filter: blur(10px);
+}

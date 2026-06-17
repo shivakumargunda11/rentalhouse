@@ -285,13 +285,13 @@ const LandlordDashboard = () => {
           </h3>
 
           {formError && (
-            <div className="alert bg-danger bg-opacity-15 border border-danger border-opacity-30 text-danger rounded-3 p-3 small mb-4">
+            <div className="alert alert-glass-danger rounded-3 p-3 small mb-4">
               <ShieldAlert size={16} className="me-2 d-inline-block" /> {formError}
             </div>
           )}
 
           {formSuccess && (
-            <div className="alert bg-success bg-opacity-15 border border-success border-opacity-30 text-success rounded-3 p-3 small mb-4">
+            <div className="alert alert-glass-success rounded-3 p-3 small mb-4">
               <Sparkles size={16} className="me-2 d-inline-block" /> {formSuccess}
             </div>
           )}

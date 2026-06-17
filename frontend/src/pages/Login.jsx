@@ -52,7 +52,7 @@ const Login = () => {
 
         <div className="glass-panel p-4 p-md-5">
           {error && (
-            <div className="alert bg-danger bg-opacity-15 border border-danger border-opacity-30 text-danger rounded-3 d-flex align-items-center gap-2 mb-4" style={{ fontSize: '0.9rem' }}>
+            <div className="alert alert-glass-danger rounded-3 d-flex align-items-center gap-2 mb-4" style={{ fontSize: '0.9rem' }}>
               <AlertTriangle size={18} className="flex-shrink-0" />
               <span>{error}</span>
             </div>
