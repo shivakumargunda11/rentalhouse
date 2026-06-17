@@ -96,7 +96,7 @@ const PropertyCard = ({ property, onWishlistUpdate, isWishlisted = false }) => {
             {property.title}
           </h5>
           <div className="text-end">
-            <span className="fs-5 fw-extrabold text-primary">${property.price}</span>
+            <span className="fs-5 fw-extrabold text-primary">₹{property.price.toLocaleString('en-IN')}</span>
             <span className="text-muted small">/mo</span>
           </div>
         </div>

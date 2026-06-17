@@ -196,7 +196,7 @@ const AdminDashboard = () => {
             <div className="col-sm-6 col-md-3">
               <div className="glass-panel p-4" style={{ borderLeft: '4px solid #ec4899' }}>
                 <span className="text-muted small text-uppercase">Estimated Revenue</span>
-                <h3 className="fw-bold mt-1" style={{ color: '#ec4899' }}>${stats.totalRevenue}</h3>
+                <h3 className="fw-bold mt-1" style={{ color: '#ec4899' }}>₹{stats.totalRevenue.toLocaleString('en-IN')}</h3>
                 <div className="text-muted small mt-2">Calculated from rentals</div>
               </div>
             </div>
@@ -320,7 +320,7 @@ const AdminDashboard = () => {
                         <Eye size={14} />
                       </Link>
                     </div>
-                    <div className="text-muted small">{prop.location} • ${prop.price}/mo</div>
+                    <div className="text-muted small">{prop.location} • ₹{prop.price.toLocaleString('en-IN')}/mo</div>
                   </td>
                   <td>
                     {prop.owner ? (

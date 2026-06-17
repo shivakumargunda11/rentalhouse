@@ -238,7 +238,7 @@ const Home = () => {
                         <div className="row g-3">
                           {/* Price Range */}
                           <div className="col-sm-6 col-md-3">
-                            <label className="form-label text-muted small">Min Price ($/mo)</label>
+                            <label className="form-label text-muted small">Min Price (₹/mo)</label>
                             <input
                               type="number"
                               className="form-control form-glass"
@@ -248,7 +248,7 @@ const Home = () => {
                             />
                           </div>
                           <div className="col-sm-6 col-md-3">
-                            <label className="form-label text-muted small">Max Price ($/mo)</label>
+                            <label className="form-label text-muted small">Max Price (₹/mo)</label>
                             <input
                               type="number"
                               className="form-control form-glass"

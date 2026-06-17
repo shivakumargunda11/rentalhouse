@@ -30,7 +30,7 @@ const seedData = async () => {
       email: 'tenant@example.com',
       password: hashedPassword,
       role: 'tenant',
-      phone: '+1 (555) 123-4567',
+      phone: '+91 98765 43210',
     });
 
     const landlordUser = await User.create({
@@ -38,7 +38,7 @@ const seedData = async () => {
       email: 'landlord@example.com',
       password: hashedPassword,
       role: 'landlord',
-      phone: '+1 (555) 987-6543',
+      phone: '+91 87654 32109',
     });
 
     const adminUser = await User.create({
@@ -46,7 +46,7 @@ const seedData = async () => {
       email: 'admin@example.com',
       password: hashedPassword,
       role: 'admin',
-      phone: '+1 (555) 000-1111',
+      phone: '+91 76543 21098',
     });
 
     console.log('Users seeded successfully.');
@@ -55,9 +55,9 @@ const seedData = async () => {
     const properties = [
       {
         title: 'Modern Luxury Penthouse',
-        description: 'Exquisite penthouse apartment featuring floor-to-ceiling windows, wrap-around balcony, state-of-the-art kitchen appliances, and direct elevator access. Located in the heart of downtown with breathtaking views of the skyline.',
-        price: 3200,
-        location: 'San Francisco, CA',
+        description: 'Exquisite penthouse apartment featuring floor-to-ceiling windows, wrap-around balcony, state-of-the-art kitchen appliances, and direct elevator access. Located in the heart of Worli with breathtaking views of the Sea Link.',
+        price: 95000,
+        location: 'Worli, Mumbai',
         type: 'apartment',
         bedrooms: 2,
         bathrooms: 2,
@@ -69,10 +69,10 @@ const seedData = async () => {
         isApproved: true,
       },
       {
-        title: 'Charming Craftsman Suburban House',
-        description: 'Spacious craftsman style home with a fully fenced landscaped backyard, perfect for families and pets. Features include oak hardwood floors, cozy wood-burning fireplace, and a updated country kitchen. Quiet neighborhood near schools.',
-        price: 2600,
-        location: 'Seattle, WA',
+        title: 'Charming Craftsman Villa House',
+        description: 'Spacious craftsman style villa with a fully landscaped garden, perfect for families. Features include teak wood flooring, custom fireplace, and a modular kitchen. Located in a quiet gated street near tech parks.',
+        price: 55000,
+        location: 'Indiranagar, Bangalore',
         type: 'house',
         bedrooms: 3,
         bathrooms: 2,
@@ -85,9 +85,9 @@ const seedData = async () => {
       },
       {
         title: 'Urban Industrial Loft Space',
-        description: 'True industrial loft living with exposed brick walls, original heavy timber beams, and polished concrete floors. Open concept floor plan allows customized configurations. Excellent transit links, walk to local breweries.',
-        price: 1850,
-        location: 'Brooklyn, NY',
+        description: 'True industrial loft living with exposed brick walls, timber beams, and high ceilings. Open concept floor plan allows customized workspace configurations. Steps away from metro, cafes, and markets.',
+        price: 38000,
+        location: 'Hauz Khas, Delhi',
         type: 'studio',
         bedrooms: 1,
         bathrooms: 1,
@@ -100,9 +100,9 @@ const seedData = async () => {
       },
       {
         title: 'Quiet Private Room in Shared Villa',
-        description: 'Cozy private room in a sprawling Spanish-style villa in a highly desirable residential pocket. Access to shared living room, massive chef kitchen, outdoor heated pool, and laundry suite. All utilities included in rent.',
-        price: 950,
-        location: 'Austin, TX',
+        description: 'Cozy private room in a sprawling luxury villa in a prime tech hub. Access to shared living room, large kitchen, pool table, and washing area. All maintenance and high-speed fiber internet bills included in rent.',
+        price: 15000,
+        location: 'Gachibowli, Hyderabad',
         type: 'room',
         bedrooms: 1,
         bathrooms: 1,

@@ -266,7 +266,7 @@ const LandlordDashboard = () => {
             <div className="d-flex justify-content-between align-items-center">
               <div>
                 <span className="text-muted small text-uppercase fw-semibold">Total Revenue</span>
-                <h3 className="fw-extrabold mt-1 text-success">${totalEarnings}</h3>
+                <h3 className="fw-extrabold mt-1 text-success">₹{totalEarnings.toLocaleString('en-IN')}</h3>
               </div>
               <div className="bg-success bg-opacity-20 rounded-3 p-3 text-success">
                 <DollarSign size={24} />
@@ -313,7 +313,7 @@ const LandlordDashboard = () => {
 
               {/* Monthly Price */}
               <div className="col-md-3">
-                <label className="form-label text-muted small fw-semibold">Monthly Rent ($/mo) *</label>
+                <label className="form-label text-muted small fw-semibold">Monthly Rent (₹/mo) *</label>
                 <input
                   type="number"
                   className="form-control form-glass"
@@ -532,7 +532,7 @@ const LandlordDashboard = () => {
                         <h5 className="fw-bold text-white text-truncate mb-1">{prop.title}</h5>
                         <p className="text-muted small text-truncate mb-0">{prop.location}</p>
                         <div className="d-flex gap-2 align-items-center mt-1">
-                          <span className="text-primary fw-extrabold text-sm">${prop.price}</span>
+                          <span className="text-primary fw-extrabold text-sm">₹{prop.price.toLocaleString('en-IN')}</span>
                           <span className="text-muted small">/mo</span>
                           <span className={`badge ${prop.availability ? 'bg-success bg-opacity-20 text-success border border-success border-opacity-20' : 'bg-danger bg-opacity-20 text-danger border border-danger border-opacity-20'}`} style={{ fontSize: '0.7rem' }}>
                             {prop.availability ? 'Available' : 'Rented'}
@@ -626,7 +626,7 @@ const LandlordDashboard = () => {
                     <div className="col-md-3 text-md-end">
                       <div className="mb-2">
                         <span className="text-muted small me-2">Offer:</span>
-                        <span className="fs-5 fw-extrabold text-primary">${booking.totalPrice}</span>
+                        <span className="fs-5 fw-extrabold text-primary">₹{booking.totalPrice.toLocaleString('en-IN')}</span>
                       </div>
 
                       {booking.status === 'pending' ? (

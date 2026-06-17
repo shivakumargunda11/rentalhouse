@@ -308,7 +308,7 @@ const PropertyDetail = () => {
             <div className="d-flex justify-content-between align-items-center mb-4">
               <div>
                 <span className="text-muted small">Monthly Rent</span>
-                <div className="fs-3 fw-black text-primary">${property.price}</div>
+                <div className="fs-3 fw-black text-primary">₹{property.price.toLocaleString('en-IN')}</div>
               </div>
               <span className="badge bg-primary bg-opacity-15 text-white py-2 px-3 border border-primary border-opacity-25">
                 Per Month
@@ -406,7 +406,7 @@ const PropertyDetail = () => {
                     <h6 className="fw-bold mb-2">Cost Details</h6>
                     <div className="d-flex justify-content-between small text-muted mb-1">
                       <span>Rate (daily estimate)</span>
-                      <span>${Math.round(property.price / 30)}/day</span>
+                      <span>₹{Math.round(property.price / 30).toLocaleString('en-IN')}/day</span>
                     </div>
                     <div className="d-flex justify-content-between small text-muted mb-2">
                       <span>Duration</span>
@@ -414,7 +414,7 @@ const PropertyDetail = () => {
                     </div>
                     <div className="d-flex justify-content-between fw-bold pt-2 border-top text-white" style={{ borderColor: 'var(--border-color) !important' }}>
                       <span>Estimated Total</span>
-                      <span className="text-primary">${totalPrice}</span>
+                      <span className="text-primary">₹{totalPrice.toLocaleString('en-IN')}</span>
                     </div>
                   </div>
                 )}

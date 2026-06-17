@@ -181,7 +181,7 @@ const TenantDashboard = () => {
                     <div className="col-sm-3 col-md-2">
                       <div className="small text-muted">Price Calculation</div>
                       <div className="fs-5 fw-extrabold text-primary mt-1">
-                        ${booking.totalPrice}
+                        ₹{booking.totalPrice.toLocaleString('en-IN')}
                       </div>
                       <div className="text-muted small">Total contract</div>
                     </div>
